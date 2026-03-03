@@ -1,0 +1,489 @@
+:root{
+ /*fonts*/
+ --headings-font: "Indie Flower", cursive;
+ --text-font: "Nunito", sans-serif;
+
+ /*colors*/
+ --link-color: #1971c2;
+ --secondary-color: #858585;
+ --secondary-bg-color: #e0e0e0;
+}
+
+/*default styles*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+h1, h2, h3, footer > p{
+    font-family: var(--headings-font);
+}
+
+ul{
+    list-style-type: none;
+}
+
+p, li, blockquote{
+    font-family: var(--text-font);
+    font-weight: 500;
+}
+
+a:not(nav>ul>li>a, .projects>ul>li>a){
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.review > p{
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+
+
+/*header*/
+header{
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo > img{
+    width: 40px;
+}
+
+.logo > h2{
+    font-size: 2rem;
+    font-family: var(--text-font);
+    margin-bottom: 10px;
+}
+
+nav{
+    width: 100%;
+    text-align: center
+}
+
+nav > ul > li{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+nav > ul > li:not(:last-child)::after{
+    content: "/";
+    margin: 0 7px;
+}
+
+nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+    font-weight: bold;
+}
+
+
+
+
+
+/* hero */
+#hero{
+    padding: 20px;
+    text-align: center;
+}
+
+#hero > p{
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* info */
+#info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.projects > h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6em;
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+.projects > ul{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.projects > ul > li{
+    padding: 12px;
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.projects> ul > li:not(:last-child){
+    border-bottom: 1px solid black
+}
+
+.projects > ul > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+.projects > ul > li > a:hover{
+    text-decoration: underline;
+}
+
+
+
+.experiences{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experiences > h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6em;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.experiences > article{
+    padding: 30px;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+}
+
+.experiences > article > p{
+    font-size: 1.2em;
+}
+
+.experiences > article > a{
+    font-weight: bold;
+}
+
+.experiences > article:not(:last-child){
+    border-bottom: 1px solid black;
+}
+
+
+
+
+
+
+.education{
+    width: 100%;
+}
+
+.education > h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6em;
+    width: 100%;    padding: 10px;
+    font-size: 1.6em;
+    border-top: 2px solid black;
+}
+
+.education > p, .education > ul{
+    padding: 0 15px 10px 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.education > ul{
+    margin-left: 10px;
+}
+
+.education > ul > li{
+    list-style-type: "-";
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+#reviews{
+    width: 100%;
+}
+
+#reviews > h2{
+    text-align: center;
+    padding: 25px;
+    font-size: 1.6em;
+    width: 100%;
+    font-size: 1.6em;
+    border-top: 2px solid black;
+    margin-top: 15px;
+}
+
+.rv-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: center;
+}
+
+.rv-container > .review:not(:first-child){
+    display: none;
+}
+
+.rv-container > .review{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.rv-container > .review > blockquote{
+    margin-bottom: 15px;
+}
+
+.rv-container > .review > p{
+    font-weight: 600;
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    padding: 30px;
+}
+
+footer > p{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+@media screen and (min-width: 992px){
+    
+/*header*/
+header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo{
+    display: inline-flex;
+    flex: 1;
+    text-align: left;
+    align-items: center;
+}
+
+.logo > h2{
+    display: inline;
+    margin-left: 10px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+
+
+
+
+
+
+/* hero */
+#hero{
+    padding: 20px 20px 150px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+#hero > h1{
+    width: 100%;
+}
+
+#hero > p{
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+/* info */
+#info{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.projects{
+    flex: 1;
+    margin-top: 0;
+}
+
+.projects > h2{
+    text-align: left;
+    border: none;
+    padding: 20px;
+}
+
+.projects > ul{
+    border-top: none;
+    border-bottom: none;
+}
+
+.projects > ul > li{
+    background-color: transparent;
+    text-align: left;
+}
+
+.projects> ul > li:not(:last-child){
+    border-bottom: 2px solid black
+}
+
+
+
+
+
+
+
+.experiences{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.experiences > h2{
+    text-align: left;
+    border: none;
+    padding: 20px;
+}
+
+.experiences > article{
+    background-color: transparent;
+}
+
+.experiences > article > p{
+    font-size: 1.2em;
+}
+
+.experiences > article > a{
+    font-weight: bold;
+}
+
+.experiences > article:not(:last-child){
+    border-bottom: 2px solid black;
+}
+
+
+
+
+
+
+.education{
+    flex: 2;
+    padding: 10px;
+}
+
+.education > h2{
+    text-align: left;
+    border: none;
+}
+
+.education > p, .education > ul{
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+#reviews{
+    width: 100%;
+}
+
+#reviews > h2{
+    border-top: none;
+}
+
+.rv-container > .review:not(:first-child){
+    display: block;
+}
+
+.rv-container > .review{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.rv-container > .review > blockquote{
+    margin-bottom: 15px;
+}
+
+.rv-container > .review > p{
+    font-weight: 600;
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    padding: 30px;
+}
+
+footer > p{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+}
